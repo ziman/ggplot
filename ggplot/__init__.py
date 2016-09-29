@@ -19,6 +19,8 @@ _set_mpl_backend()
 from .geoms import geom_area, geom_blank, geom_boxplot, geom_line, geom_point, geom_jitter, geom_histogram, geom_density, geom_hline, geom_vline, geom_bar, geom_abline, geom_tile, geom_rect, geom_bin2d, geom_step, geom_text, geom_path, geom_ribbon, geom_now_its_art, geom_violin, geom_errorbar, geom_polygon
 from .stats import stat_smooth, stat_density
 
+from .positions import position_jitter
+
 from .facets import facet_wrap, facet_grid, Facet
 
 from .chart_components import ggtitle, xlim, ylim, xlab, ylab, labs
