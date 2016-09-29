@@ -33,7 +33,7 @@ class geom_jitter(geom_point):
     Examples
     --------
     """
-    def __init__(self, *args, radius=0.5, radius_x=None, radius_y=None, **kwargs):
+    def __init__(self, radius=0.5, radius_x=None, radius_y=None, **kwargs):
         super(geom_point, self).__init__(*args, **kwargs)
         self.params['position'] = "jitter"
         self.params['jitter_radius'] = (radius_x or radius, radius_y or radius)
