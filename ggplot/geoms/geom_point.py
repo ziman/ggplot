@@ -46,8 +46,9 @@ class geom_point(geom):
             params['cmap'] = variables['colormap']
 
         if self.params.get("jitter"):
-            x *= np.random.uniform(.9, 1.1, len(x))
-            y *= np.random.uniform(.9, 1.1, len(y))
+            rx, ry = self.params['jitter_radius']
+            x += np.random.uniform(-rx, rx, len(x))
+            y += np.random.uniform(-ry, ry, len(y))
 
         if is_date(x.iloc[0]):
             dtype = x.iloc[0].__class__
